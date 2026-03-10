@@ -1,0 +1,24 @@
+name: Keep HuggingFace Spaces Awake
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # runs every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  ping-spaces:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping HuggingFace Spaces
+        run: |
+          urls=(
+            "https://kalpkanungo-multimodal-en-de-translator.hf.space"
+            "https://kalpkanungo-geovistar.hf.space"
+            "https://kalpkanungo-eventface.hf.space"
+          )
+
+          for url in "${urls[@]}"; do
+            echo "Pinging $url"
+            curl -L -s -o /dev/null $url
+          done
