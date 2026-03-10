@@ -20,5 +20,5 @@ jobs:
 
           for url in "${urls[@]}"; do
             echo "Pinging $url"
-            curl -L -s -o /dev/null $url
+            curl -L --max-time 30 -s -o /dev/null $url
           done
