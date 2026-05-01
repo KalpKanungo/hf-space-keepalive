@@ -16,7 +16,7 @@ jobs:
             "https://kalpkanungo-multimodal-en-de-translator.hf.space"
             "https://kalpkanungo-geovistar.hf.space"
             "https://kalpkanungo-eventface.hf.space"
-            "https://kalpkanungo-Reflex_rag.hf.space"
+            "https://huggingface.co/spaces/kalpkanungo/Reflex_rag"
             "https://kalpkanungo-scenegraphnet.hf.space"
           )
 
